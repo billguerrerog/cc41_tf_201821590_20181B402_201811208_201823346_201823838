@@ -37,6 +37,6 @@ A comparacion del algoritmo de Dijkstra, el algoritmo de Floyd Warshall es asint
   
  Resultaría así:
                                                     
- ![image](https://user-images.githubusercontent.com/52021716/135740422-e61e2d17-426d-4c20-98da-04088fd5a623.png)
+![image](https://user-images.githubusercontent.com/52021716/135740422-e61e2d17-426d-4c20-98da-04088fd5a623.png)
 
 El análisis asintótico del algoritmo de Floyd Warshall es de O(n^3).
