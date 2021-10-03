@@ -16,6 +16,7 @@
 - Todos los vehículos recorren la misma cantidad de kilómetros por litro de combustible.
 - Todos los vehículos utilizand el mismo tipo de combustible, es decir, mismo precio de combustible
 
+
 ### Cálculo del costo:
 ```
 Costo = (distancia/kilómetros recorridos por litro)*precio
