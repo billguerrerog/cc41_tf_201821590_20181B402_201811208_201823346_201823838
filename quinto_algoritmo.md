@@ -15,6 +15,20 @@ lo cual es asintóticamente mucho más rápido.
 
 Este sería el análisis asintótico de cada método del fibonnaci heap.
 
-![GitHub Logo](https://cdn.discordapp.com/attachments/839568290078392383/894071751884029952/1_sqw-VCwr0RCc2uwo4gWfDB_GjMPdxuu-_qUD92GpYESV0mLIZhd6qy-kGAKTiA.png)
+### Pseudocódigo de Dijkstra <h3>
+  
+1) Establecer todas las distancias de los nodos a infinito y comenzar desde 0
+2) Añadir (0,start) a la cola
+3) While la cola no está vacía:
+4) Pop (d,currently) de la cola
+5) if currently no está hecho:
+6) Marcar currently como hecho
+7) For todas las aristas (currently,w,e):
+8) if d+e< w distancia actual:
+9) w distancia actual = d + e
+10) w anterior nodo es el actual
+11) añadir (d+e,w) a la cola
+                            
+  
 
 El análisis asintótico del algoritmo de dijkstra es de O(n^2).
