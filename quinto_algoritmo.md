@@ -28,6 +28,7 @@ Este sería el análisis asintótico de cada método del fibonnaci heap.
 9) w distancia actual = d + e
 10) w anterior nodo es el actual
 11) añadir (d+e,w) a la cola
+            
                             
   
 
