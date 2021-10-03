@@ -1,4 +1,4 @@
-#Espacio de Búsqueda
+# Espacio de Búsqueda
 
 ## Estado Inicial
 El estado inicial para el espacio de búsqueda de este problema se está considerando 100 puntos de distribución (almacenes) y 5000 puntos de entrega repartidos por toda la ciudad. Para poder representar el espacio de búsqueda se está utilizando el siguiente gráfico.
