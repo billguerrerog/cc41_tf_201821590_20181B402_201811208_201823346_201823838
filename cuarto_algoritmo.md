@@ -3,40 +3,42 @@
 Topic | Desc
 ------------ | -------------
 Autor | Sebastian Alfaro
-Tecnica Principal | Floyd Warshall algorithm
+Técnica Principal | Prim algorithm
 
-Para resolver el problema de enrutamiento de vehículos, se implementará el algoritmo de Floyd Warshall. 
-El algoritmo de Floyd Warshall tiene una complejidad de 0(n^3). 
-A comparacion del algoritmo de Dijkstra, el algoritmo de Floyd Warshall es asintóticamente mucho más rápido.
+Para resolver el problema de enrutamiento de vehículos, se implementará el algoritmo de Prim. 
+El algoritmo de Prim tiene una complejidad de O(n^2). 
+A comparacion del algoritmo de Dijkstra, el algoritmo de Prim es asintóticamente mucho más rápido.
 
-### Pseudocódigo del algoritmo de Floyd Warshall <h2>
+### Pseudocódigo del algoritmo de Prim <h2>
 
-  	n = rows [W]
-    	D ^ (0) = W
-    	 For k = 1 to n
-    	   Do for I = 1 to n 
-         Do for j = 1 to n 
-    	 d (ij) ^ (k) = min (d(ij) ^ (k-1), d (ik) ^ (k-1) + d(kj) ^ (k-1))
-    return D ^ (n)
+  	Algoritmo_Prim(G grafo, A conjunto_aristas)
+            A:= conjunto_vacío;
+            VISTOS:= añadir (conjunto_vacio, {1});
+            Para i=2 hasta n hacer
+                        VECINO[i]:= 1;
+                        COSTE_MÍNIMO [i]:= M [i, 1];
+            FinPara
+            Mientras (|VISTOS| < n) hacer           
+                        min:= infinito;
+                        Para j=2 hasta n hacer
+                                   si (0 <= COSTE_MÍNIMO [j] < min) entonces
+                                               min:= COSTE_MÍNIMO [j]; k:= j;
+                                   FinSi
+                        FinPara
+                        A:= A U {(k, VECINO[k])};
+                        VISTOS:= VISTOS U {k};
+                        COSTE_MÍNIMO [k]:= -1;
+                        para j=2 hasta n hacer
+                                   si (M[k,j] < COSTE_MÍNIMO [j]) entonces                   
+                                           COSTE_MÍNIMO [j]:= M [k,j]                                          
+                                           VECINO[j]:= k;
+                                   FinSi
+                        FinPara
+            FinMientras
+    FinAlgoritmo_Prim
 
-### Análisis asintótico de Floyd Warshall <h3>
+### Análisis asintótico de Prim <h3>
 
-![image](https://user-images.githubusercontent.com/52021716/135740384-59cf3220-fa11-47fb-a969-93352803f874.png)
- 
- Siguiendo el análisis:
-  1. Asignacion: +1
-  2. Leer referencias k y n, Comparacion k=n y k<n: +4n
-  3. Asignacion: +1
-  4. Leer referencias i y n, Comparacion i=n y i<n: +4n^2
-  5. Asignacion: +1n^2
-  6. Leer referencias j y n, Comparacion j=n y j<n: +4n^3
-  7. Leer referencias i,j,k Ak, Aj, Ai, Suma Ak+Aj, Calculo min , Asignación min(Ai,Aj + Ak) 9n^3
-  8. Leer referencias j, Suma j+1, Asignación j+1 3n^3
-  9. Leer referencias i, Suma i+1, Asignación i+1 3n^2
-  10. Leer referencias k, Suma k+1, Asignación k+1 3n
-  
- Resultaría así:
-                                                    
-![image](https://user-images.githubusercontent.com/52021716/135740422-e61e2d17-426d-4c20-98da-04088fd5a623.png)
+![image](https://media.discordapp.net/attachments/829066700808126487/911881665171816478/unknown.png?width=892&height=504)
 
-El análisis asintótico del algoritmo de Floyd Warshall es de O(n^3).
+El análisis asintótico del algoritmo de Prim es de O(n^2).
