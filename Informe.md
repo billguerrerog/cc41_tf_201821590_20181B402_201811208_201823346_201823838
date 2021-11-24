@@ -22,6 +22,30 @@ para un problema de VRP y una de sus posibles salidas:
  ![Imagen de VRP](https://cdn.discordapp.com/attachments/729537977092407390/912102993434927164/vrp.png)
  
  ## MARCO TEÓRICO
+ ### Algoritmo BFS (Breadth First Search)
+ El algoritmo de búsqueda en anchura (BFS) es un algoritmo de búsqueda el cual recorre todos los nodos de un grafo. Comenzando en la raíz, eligiendo un nodocomo raíz en el caso de un  grafo, para seguir con la búsqueda en los nodos adyacentes. Este proceso se repite hasta recorrer todo el grafo, o en su defecto encontrar el nodo solicitado. 
+ > - La complejidad del algoritmo BFS está representado por O(V + E)
+ 
+ ### Algoritmo DFS (Depth Firts Search)
+ El algoritmo de búsqueda en profundidad es un algoritmo de búsqueda que consiste en recorrer un grafo desde un nodo de inicio, de manera que, los nodos que localiza los recorrerá hasta que no queden más en dicho camino, luego de volver al nodo de origen volverá a realizar el mismo proceso con los demás nodos vecinos. Al recorrer todos los nodos o encontrar el nodo buscado, acabará el proceso.
+> - El algoritmo DFS emplea la tecnica de Backtracking para resolver los problemas. 
+ 
+ ### Algoritmo de Dijkstra
+ El algoritmo de búsqueda en anchura es un algoritmo de búsqueda el cual recorre todos los nodos de un grafo. Comenzando en la raíz, eligiendo un nodocomo raíz en el caso de un  grafo, para seguir con la búsqueda en los nodos adyacentes. Este proceso se repite hasta recorrer todo el grafo, o en su defecto encontrar el nodo solicitado. 
+ 
+ > - Fue concebido por Edsger Dijkstra, científico de la computación de los Países Bajos, en 1956. 
+ > - La complejidad del algoritmo de Dijkstra es de O(n^2).
+ 
+ ### Algoritmo de Prim
+ El algoritmo Prim es un algoritmo que permite encontrar de un árbol recubridor mínimo en un grafo conexo. El algoritmo encuentra un subconjunto de aristas que forman un árbol con todos los vértices, donde el peso total de todas las aristas en el árbol es el mínimo posible. En caso el grafo no fuera conexo, entonces el algoritmo encontrará el árbol recubridor mínimo para uno de los componentes conexos que forman dicho grafo no conexo.
+ 
+ > - El algoritmo fue diseñado en 1930 por el matemático Vojtech Jarnik y luego de manera independiente por el científico computacional Robert C. Prim en 1957
+ > - Algoritmo del Prim también conocido como algoritmo DJP o algoritmo de Jarnik
+ 
+ ### Fibonacci Heap
+ Fibonacci heap es una estructura de datos subconjunto de los montículos, que a su vez, son un subconjunto especial dentro de los bosques de árboles. Fibonacci heap fue desarrollado en 1984 por Michael L. Fredman y Robert E. Tarjan. En un Fibonacci heap, un nodo puede tener más de dos hijos o ningún hijo. Además, tiene operaciones heap más eficientes que las soportadas por los heaps binomiales y binarios.
+ 
+ > - El algoritmo de Dijkstra usando fibonacci heap tiene una complejidad de O(E + V log V)
  
  ## DESARROLLO
  ### Creación del Grafo 
@@ -213,6 +237,9 @@ def algorithm_5(graph, start):
 ```
 
  ## CONCLUSIONES
+ - Dado que tenemos grafos con numero de aristas exponenciales, utilizar algoritmos como BFS aplicando fuerza bruta o Dijkstra, nos brindan una mayor velocidad en la respuesta esperada para la solucion del proyecto.
+ - Los problemas de VRP tienen diferentes soluciones aplicables, el uso de estos algoritmos permiten hacer un constraste sobre la exhaustiva tarea que sería implementar una solucion para un VRP.
+ - Los implementar los algoritmos en el lenguaje de programacion python, nos ayudó a entender correctamente la logica de los mismos debido a la sencilla sintaxis de código explicada en clases.
  ## BIBLIOFRAFÍA
 - Proposal of Fibonacci Heap in the Dijkstra Algorithm for Low-power Ad-hoc Mobile Transmissions. (2020, 1 marzo). IEEE Journals & Magazine | IEEE Xplore. https://ieeexplore.ieee.org/abstract/document/9082735
 - Robinson, S. (2021, 21 noviembre). Graphs in Python: Dijkstra’s Algorithm. Stack Abuse. https://stackabuse.com/dijkstras-algorithm-in-python/
