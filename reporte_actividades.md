@@ -38,3 +38,5 @@ N° | Issue | Responsables | Fecha de entrega
 34 | Demostración de algoritmos | Bill Guerrero | Semana 15
 35 | Definir archivo de presentación del trabajo final | José Tarazona, Sebastián Alfaro | Semana 15
 36 | Actualización de Reporte de Actividades | Bill Guerrero | Semana 15
+37 | Elaboración de un video de 10 a 15 minutos con la exposición donde participan todos los integrantes | Bill Guerrero, Josue Cuentas, Sebastián Alfaro, José Tarazona, José Pain | Semana 15
+38 | Actualización del informe de trabajo final | Sebastián Alfaro, José Tarazona | Semana 15
