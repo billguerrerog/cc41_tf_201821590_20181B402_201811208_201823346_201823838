@@ -237,6 +237,46 @@ def algorithm_5(graph, start):
                     pushFib(fheap1, (v, f))
     return parent
 ```
+## DEMOSTRACION 
+``` python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def get_alm_coords_from_dict(from_dict):
+    alm_coords_list = []
+    for i in routes_dict.keys():
+        x, y = get_coords(i)
+        aux = [x, y]
+        alm_coords_list.append(aux)
+    return alm_coords_list
+
+alm_nodes_list = get_alm_coords_from_dict(routes_dict)
+
+regions_routes_to_coords = []
+for storage in routes_dict.keys():
+    region_route_to_coords = []
+    for delivery in routes_dict[storage]:
+        route_to_delivery = []
+        for point in routes_dict[storage][delivery]:
+            x, y = get_coords(point)
+            aux = [x, y]
+            route_to_delivery.append(aux)
+        region_route_to_coords.append(route_to_delivery)
+    regions_routes_to_coords.append(region_route_to_coords)
+
+# Show regions routes
+for i in regions_routes_to_coords:
+    for j in i:
+        data = np.array(j)
+        plt.plot(*data.T)
+
+#Show storage points
+for i in alm_nodes_list:
+    plt.plot(i[0], i[1],marker="o", markersize=10, markeredgecolor="red", markerfacecolor="red")
+
+plt.show()
+```
+![image](https://user-images.githubusercontent.com/52021716/143510220-07f5f882-f035-462b-a12a-cb9dd2701bba.png)
 
  ## CONCLUSIONES
  - Dado que tenemos grafos con numero de aristas exponenciales, utilizar algoritmos como BFS aplicando fuerza bruta o Dijkstra, nos brindan una mayor velocidad en la respuesta esperada para la solucion del proyecto.
