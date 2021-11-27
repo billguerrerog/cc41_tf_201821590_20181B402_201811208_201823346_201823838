@@ -237,7 +237,7 @@ def algorithm_5(graph, start):
                     pushFib(fheap1, (v, f))
     return parent
 ```
-## DEMOSTRACION 
+## DEMOSTRACIÓN 
 ``` python
 import numpy as np
 import matplotlib.pyplot as plt
